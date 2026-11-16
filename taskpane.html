@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expliquer la facture</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="explain.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+  <header>
+    <h1>Expliquer la facture</h1>
+    <p class="sub">Analyse locale du PDF : rien n'est envoyé hors de ta messagerie.</p>
+  </header>
+
+  <div id="choix" class="hidden">
+    <label for="pj">Pièce jointe</label>
+    <select id="pj"></select>
+  </div>
+
+  <div id="etat" class="etat">Chargement…</div>
+
+  <main id="resultat" class="hidden">
+    <section>
+      <h2>En résumé</h2>
+      <p id="resume" class="resume"></p>
+      <button id="copier" type="button">Copier le résumé</button>
+    </section>
+
+    <section id="secAlertes" class="hidden">
+      <h2>Points d'attention</h2>
+      <ul id="alertes" class="alertes"></ul>
+    </section>
+
+    <section>
+      <h2>Chiffres clés</h2>
+      <table id="cles" class="cles"></table>
+    </section>
+
+    <section id="secLignes" class="hidden">
+      <h2>Ce qui est facturé</h2>
+      <table id="lignes" class="lignes"></table>
+    </section>
+
+    <section id="secInfos" class="hidden">
+      <h2>Bon à savoir</h2>
+      <ul id="infos"></ul>
+    </section>
+
+    <details>
+      <summary>Texte lu dans le PDF</summary>
+      <pre id="brut"></pre>
+    </details>
+  </main>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>

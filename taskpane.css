@@ -1,0 +1,32 @@
+:root {
+  --bg: #ffffff; --fg: #1f2328; --muted: #5f6b7a; --line: #e3e6ea; --card: #f6f8fa;
+  --accent: #0f6cbd; --warn-bg: #fff4e5; --warn-fg: #8a4b00; --ok: #107c41;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1f1f1f; --fg: #e8e8e8; --muted: #a0a7b0; --line: #3a3a3a; --card: #2a2a2a;
+          --accent: #4aa3ff; --warn-bg: #3b2a12; --warn-fg: #ffc46b; --ok: #54c58a; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 12px 14px 24px; background: var(--bg); color: var(--fg);
+       font: 14px/1.45 "Segoe UI", system-ui, sans-serif; }
+h1 { font-size: 17px; margin: 0; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 18px 0 6px; }
+.sub { margin: 2px 0 10px; color: var(--muted); font-size: 12px; }
+.hidden { display: none !important; }
+label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+select { width: 100%; padding: 6px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--fg); }
+.etat { margin: 14px 0; color: var(--muted); }
+.etat.erreur { color: var(--warn-fg); background: var(--warn-bg); padding: 8px 10px; border-radius: 4px; }
+.resume { background: var(--card); border-left: 3px solid var(--accent); padding: 10px 12px; margin: 0 0 8px; border-radius: 0 4px 4px 0; }
+button { border: 1px solid var(--line); background: var(--bg); color: var(--accent); padding: 4px 10px; border-radius: 4px; cursor: pointer; font: inherit; font-size: 12px; }
+.alertes { padding: 0; list-style: none; margin: 0; }
+.alertes li { background: var(--warn-bg); color: var(--warn-fg); padding: 7px 10px; border-radius: 4px; margin-bottom: 6px; }
+table { width: 100%; border-collapse: collapse; }
+td, th { padding: 5px 4px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+.cles td:first-child { color: var(--muted); width: 42%; }
+.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.total td { font-weight: 600; }
+.ok { color: var(--ok); }
+ul { padding-left: 18px; }
+details { margin-top: 18px; color: var(--muted); }
+pre { white-space: pre-wrap; font-size: 11px; max-height: 300px; overflow: auto; background: var(--card); padding: 8px; }
